@@ -5,7 +5,7 @@ const contactSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        minLength : 3,
+        minLength : 3, //at least add name of length 3 
     },
     email: {
         type: String,
