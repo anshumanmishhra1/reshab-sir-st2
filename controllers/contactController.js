@@ -8,7 +8,7 @@ const createContact = async (req, res) => {
     if (!name || !email || !phone) {
         return res.status(400).json({ message: 'All fields are required' });
     }
-    //📌Postman se jo aa raha hai response usko save krr lenge hm
+    //📌Postman se jo aa raha hai response usko create krr lenge hm apne database mein
     try {
         const newContact = await Contact.create({ name, email, phone });
         res.status(201).json(newContact);
